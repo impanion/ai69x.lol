@@ -5,9 +5,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text for contrast */
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
     text-align: center;
 }
 
@@ -18,16 +18,16 @@ body {
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 156px;
     margin-bottom: 1rem;
 }
 
 .title .normal {
-    font-weight: 400; /* Normal Poppins font for 'ai' and 'x' */
+    font-weight: 400;
 }
 
 .title .bold {
-    font-weight: 700; /* Bold Poppins font for '69' */
+    font-weight: 700;
 }
 
 .subtitle {
@@ -35,22 +35,130 @@ body {
     line-height: 1.6;
 }
 
+.button-container {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.minimal-button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.minimal-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.icon-button {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+.twitter-button img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.gallery-title {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px 50px; /* Wider space between rows */
+}
+
+.gallery-item {
+    text-align: center;
+    position: relative;
+    width: 300px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.image-title {
+    font-size: 2rem; /* Doubled the font size */
+    margin-bottom: 10px;
+    color: #fff; /* Set titles to white */
+}
+
+.image-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.image-icons img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-icons img:hover {
+    transform: scale(1.2);
+}
+
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 2.5rem;
+        font-size: 100px;
     }
 
     .subtitle {
         font-size: 1rem;
     }
+
+    .minimal-button {
+        font-size: 0.9rem;
+    }
+
+    .gallery-item {
+        width: 250px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .title {
-        font-size: 2rem;
+        font-size: 80px;
     }
 
     .subtitle {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    .minimal-button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    .gallery-item {
+        width: 200px;
     }
 }
